@@ -1,0 +1,8 @@
+.title {
+  text-align: center;
+}
+.title h1 {
+  margin: 0;
+  font-size: 6em;
+  color: rgba(175, 47, 47, 0.15);
+}
