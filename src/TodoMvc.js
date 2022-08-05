@@ -1,13 +1,17 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Input from "./components/Input/Input";
 import Title from "./components/Title/Title";
-
+import FooterItem from "./components/Footer/FooterItem";
+import style from "./TodoMvc.module.css";
 const TodoMvc = () => {
   return (
-    <Fragment>
+    <div className={style.main}>
       <Title />
-      <Input />
-    </Fragment>
+      <div className={style.container}>
+        <Input />
+        <FooterItem />
+      </div>
+    </div>
   );
 };
 

@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+span {
+  color: gray;
+  font-size: large;
+}
+.active span {
+  margin-right: 10px;
+}
+.complet span {
+  margin-left: 14px;
+}

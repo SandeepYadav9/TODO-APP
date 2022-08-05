@@ -1,8 +1,12 @@
-.input {
-  text-align: center;
+.newItem {
+  padding: 1rem;
+}
+.newItem input {
+  background-color: rgba(0, 0, 0, 0.003);
+  width: 100%;
+  padding: 1rem 5rem;
+  box-shadow: 0 -2px 1px rgba(0, 0, 0, 0.003);
+  border: 1px solid gray;
   
 }
-.input input {
-  
-  
-}
+
