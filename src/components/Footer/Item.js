@@ -4,7 +4,7 @@ const ItemLeft = () => {
   return (
     <div className={style.footer}>
       <div className={style.todoCount}>
-        <span> items left</span>
+        <span>0 items left</span>
       </div>
       <div className={style.active}>
         <span>All</span>
