@@ -10,15 +10,12 @@ const Input = () => {
       const listArr = [...listData];
       listArr.push(input);
       setListData(listArr);
-      
       setInput("");
     }
-    // setListData(e.target.value)
-    // setListData(input);
   };
   return (
     <div className={style.newItem}>
-      <input
+      <input        
         type="text"
         value={input}
         onChange={(e) => {

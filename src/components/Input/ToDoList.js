@@ -7,8 +7,10 @@ const ToDoList = (props) => {
       {props.listData.map((list) => {
         return (
           <div className={style.listData}>
-            <li key={list.list}>{list}</li>
-            
+            <li key={list.list}>{list}
+            </li>
+           
+          
           </div>
         );
       })}
