@@ -1,31 +1,20 @@
 import React, { useState } from "react";
 import style from "./Input.module.css";
-import ToDoList from "./ToDoList";
-const Input = () => {
+
+const Input = (props) => {
   const [input, setInput] = useState("");
-  const [listData, setListData] = useState([]);
-  const submitHandler = (e) => {
-    console.log("value", e);
-    if (e.code === "Enter") {
-      const listArr = [...listData];
-      listArr.push(input);
-      setListData(listArr);
-      setInput("");
-    }
-  };
+
   return (
     <div className={style.newItem}>
-      <input        
+      <input
         type="text"
         value={input}
         onChange={(e) => {
           setInput(e.target.value);
         }}
-        onKeyDown={submitHandler}
+        onKeyDown={props.submitHandler}
         placeholder="What need to be done ?"
       />
-
-      <ToDoList listData={listData} />
     </div>
   );
 };
