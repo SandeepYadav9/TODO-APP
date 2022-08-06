@@ -1,0 +1,12 @@
+.listToDo {
+  list-style: none;
+  font-size: 1.5em;
+}
+.listData {
+  display: flex;
+}
+
+.listOfInput {
+  display: flex;
+  justify-content: space-between;
+}

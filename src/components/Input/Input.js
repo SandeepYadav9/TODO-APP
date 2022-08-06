@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import style from "./Input.module.css";
+import ToDoList from "./ToDoList";
 const Input = () => {
   const [input, setInput] = useState("");
   const [listData, setListData] = useState([]);
@@ -9,6 +10,7 @@ const Input = () => {
       const listArr = [...listData];
       listArr.push(input);
       setListData(listArr);
+      
       setInput("");
     }
     // setListData(e.target.value)
@@ -26,11 +28,7 @@ const Input = () => {
         placeholder="What need to be done ?"
       />
 
-      <ul>
-        {listData.map((list) => {
-          return <li>{list}</li>;
-        })}
-      </ul>
+      <ToDoList listData={listData} />
     </div>
   );
 };
