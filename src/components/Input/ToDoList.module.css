@@ -1,12 +1,27 @@
 .listToDo {
   list-style: none;
-  font-size: 1.5em;
 }
-.listData {
-  display: flex;
+ul {
+  display: block;
+  margin-block: 1em 1em;
+  margin-inline: 0px;
 }
-
-.listOfInput {
-  display: flex;
-  justify-content: space-between;
+.listToDo li {
+  font-size: 25px;
+  border-bottom: 1px solid #ededed;
+  margin: 10px;
+  line-height: 2.5rem;
+}
+.listToDo li .toggle {
+  width: 4rem;
+  text-align: center;
+  margin: auto 0;
+  border: none;
+}
+.listToDo li label {
+  word-break: break-all;
+  padding: 15px;
+}
+.view button {
+  margin-left: 18rem;
 }

@@ -6,9 +6,13 @@ const ToDoList = (props) => {
     <ul className={style.listToDo}>
       {props.listData.map((list) => {
         return (
-          <div className={style.listData}>
-            <li key={list.list}>{list}</li>
-          </div>
+          <li>
+            <div className={style.view}>
+              <input className={style.toggle} type="checkbox" />
+              <label>{list}</label>
+              <button className={style.delete}>Delete</button>
+            </div>
+          </li>
         );
       })}
     </ul>

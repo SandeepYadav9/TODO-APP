@@ -4,16 +4,24 @@ const Footer = (props) => {
   return (
     <div className={style.footer}>
       <div className={style.todoCount}>
-        <span>{props.countText} items left</span>
+        <span>
+          <strong>{props.countText}</strong> items left
+        </span>
       </div>
-      <div className={style.active}>
-        <span>All</span>
-        <span>Active</span>
-      </div>
-      <div className={style.complet}>
-        <span>Completed</span>
-        <span>Clear Completed</span>
-      </div>
+      <ul className={style.listItem}>
+        <li>
+          <a className={style.selected} href="#/">
+            All
+          </a>
+        </li>
+        <li>
+          <a href="#/active">Active</a>
+        </li>
+        <li>
+          <a href="#/completed">Completed</a>
+        </li>
+      </ul>
+      <button>Clear completed</button>
     </div>
   );
 };

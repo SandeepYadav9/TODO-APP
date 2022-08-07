@@ -1,11 +1,12 @@
 .newItem {
-  padding: 1rem;
+  padding: 0.3rem;
+
 }
 .newItem input {
   background-color: white;
   width: 100%;
   padding: 1rem 5rem;
-  box-shadow: 0 -2px 1px rgba(0, 0, 0, 0.003);
+ 
   border: none;
   font-size: 24px;
 }
