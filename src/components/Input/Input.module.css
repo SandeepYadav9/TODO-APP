@@ -2,13 +2,16 @@
   padding: 1rem;
 }
 .newItem input {
-  background-color: rgba(0, 0, 0, 0.003);
+  background-color: white;
   width: 100%;
   padding: 1rem 5rem;
   box-shadow: 0 -2px 1px rgba(0, 0, 0, 0.003);
-  font-size: 24px;
   border: none;
-  background-color: white;
+  font-size: 24px;
+}
+input::placeholder{
+  color: rgb(216, 208, 208);
+  
 }
 
 .newItem input:focus {
