@@ -1,27 +1,31 @@
-.listToDo {
+.todolist {
   list-style: none;
 }
 ul {
   display: block;
-  margin-block: 1em 1em;
-  margin-inline: 0px;
 }
-.listToDo li {
-  font-size: 25px;
+.todolist li {
+  position: relative;
+  font-size: 24px;
   border-bottom: 1px solid #ededed;
-  margin: 10px;
-  line-height: 2.5rem;
+  margin: 1rem;
 }
-.listToDo li .toggle {
-  width: 4rem;
+
+.todolist li .toggle {
   text-align: center;
-  margin: auto 0;
-  border: none;
+  width: 40px;
+  position: absolute;
+  margin-left: -2.5rem;
+  height: 1.8em;
 }
-.listToDo li label {
-  word-break: break-all;
-  padding: 15px;
+li {
+  display: list-item;
+}
+
+.view {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
 }
 .view button {
-  margin-left: 18rem;
 }
