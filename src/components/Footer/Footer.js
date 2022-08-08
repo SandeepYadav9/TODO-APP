@@ -9,7 +9,7 @@ const Footer = (props) => {
         </span>
       </div>
       <ul className={style.listItem}>
-        <li>
+        <li >
           <a className={style.selected} href="#/">
             All
           </a>
