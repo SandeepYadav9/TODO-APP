@@ -15,8 +15,8 @@ const Footer = (props) => {
             All
           </a>
         </li>
-        <li>
-          <a href="#/active">Active</a>
+        <li onClick={props.isActive}>
+          <a href="#/actives">Active</a>
         </li>
         <li onClick={props.taskIsCompled}>
           <a href="#/completed">Completed</a>

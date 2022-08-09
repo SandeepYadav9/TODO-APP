@@ -1,21 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 
 import style from "./ToDoList.module.css";
 const ToDoList = (props) => {
+  const [isCompleted, setIsCompleted] = useState(false);
+
+  const onClickCheckHandler = (list) => {
+    setIsCompleted(true);
+    props.onCompleted(list);
+  };
+  let completedTask = `{ ${isCompleted} ?  ${!style.completed}  : ${
+    style.completed
+  }}`;
   return (
     <ul className={style.todolist}>
       {props.listData.map((list, index) => {
         return (
-          <li key={index.list} >
-            <div className={style.view} >
-              <input
-                className={style.toggle}
-                onBlur={props.onChangeHandler}
-                type="checkbox"
-                
-              />
-              <label >{list}</label>
-             
+          <li
+            key={list.id}
+            className={completedTask}
+            onClick={() => onClickCheckHandler(list.id)}
+          >
+            <div className={style.view}>
+              <input className={style.toggle} type="checkbox" />
+              <label>{list.title}</label>
               <button
                 className={style.delete}
                 onClick={() => props.onDelet(index)}
