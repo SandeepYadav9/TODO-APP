@@ -12,6 +12,7 @@ const Input = (props) => {
         }}
         onKeyDown={props.submitHandler}
         placeholder="What need to be done ?"
+        onClick={props.clearHandler}
       />
     </div>
   );
