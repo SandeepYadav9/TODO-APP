@@ -1,3 +1,21 @@
+.newItem {
+  padding: 0.3rem;
+}
+.newItem input {
+  background-color: white;
+  width: 100%;
+  padding: 1rem 5rem;
+  border: none;
+  font-size: 24px;
+}
+input::placeholder {
+  color: rgb(216, 208, 208);
+}
+
+.newItem input:focus {
+  outline: none;
+}
+
 .todolist {
   list-style: none;
 }
@@ -10,7 +28,7 @@ ul {
   border-bottom: 1px solid #ededed;
   margin: 1rem;
 }
-.todolist li.completed label{
+.todolist li.completed label.active{
   color: #d9d9d9;
   text-decoration: line-through;
 }
@@ -31,5 +49,46 @@ li {
   justify-content: space-between;
   overflow: hidden;
 }
-.view button {
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em;
 }
+.listItem {
+  list-style: none;
+}
+.listItem li {
+  display: inline;
+}
+.listItem li a {
+  margin: 3px;
+  padding: 3px 7px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+.listItem li a:hover {
+  border-color: rgba(175, 47, 47, 0.1);
+}
+.listItem li a.selected {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+button {
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1rem;
+}
+span {
+  color: gray;
+  font-size: large;
+}
+.active span {
+  margin-right: 10px;
+}
+.complet span {
+  margin-left: 1.5rem;
+}
+
