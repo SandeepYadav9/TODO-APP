@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import style from "./ToDoList.module.css";
 
-
 const ToDoList = (props) => {
-  const [listData, setListData] = useState([]);
-  const [value, setValue] = useState("");
   const [count, setCount] = useState(0);
-  const [masterData, setMasterData] = useState([]);
-
+  const [value, setValue] = useState("");
+  const [masterData, setMasterData] = useState([]); //As Data Base
+  const [listData, setListData] = useState([]);
+  
   const addListHandler = (e) => {
     if (value && e.keyCode === 13) {
       const listArr = [...listData];
@@ -24,6 +23,7 @@ const ToDoList = (props) => {
       setCount(count + 1);
     }
   };
+
   const onCompletHandler = (id) => {
     const listData1 = listData.map((list) => {
       if (list.id === id) {
@@ -31,15 +31,16 @@ const ToDoList = (props) => {
           list.status = "completed";
           list.selected = "active";
           list.isChecked = true;
+          setCount(count - 1);
         } else {
           list.status = "active";
           list.selected = "inactive";
           list.isChecked = false;
+          setCount(count + 1);
         }
       }
       return list;
     });
-
     setListData(listData1);
     setMasterData(listData1);
   };
@@ -68,6 +69,7 @@ const ToDoList = (props) => {
 
   return (
     <div>
+      {/* Input What need to Task */}
       <div className={style.newItem}>
         <input
           type="text"
@@ -78,6 +80,7 @@ const ToDoList = (props) => {
           onClick={props.clearHandler}
         />
       </div>
+      {/* List output after input Task  */}
       <ul className={style.todolist}>
         {listData.map((list, index) => {
           return (
@@ -101,6 +104,7 @@ const ToDoList = (props) => {
           );
         })}
       </ul>
+      {/*  Footer Filter your to do task   */}
       <div className={style.footer}>
         <div className={style.todoCount}>
           <span>

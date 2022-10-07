@@ -12,8 +12,6 @@ const TodoMvc = () => {
       <Title />
       <div className={style.container}>
         <ToDoList />
-
-        
       </div>
     </Card>
   );
